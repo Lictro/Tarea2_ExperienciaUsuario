@@ -1,0 +1,27 @@
+<%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <div class="alert alert-danger" role="alert">
+          <strong>Oh snap!</strong> <%= pluralize(@post.errors.count, "error") %> have prevented the post from being recorded
+          </div>
+        </div>
+    <% end %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+</p>
+
+<p>
+  <%= f.label :avatar_url %>
+  <%= f.text_field :avatar_url %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tarea2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Tarea 2", root_path, id: "logo"%>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path%></li>
+            <li><%= link_to "New Post", posts_new_path%></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

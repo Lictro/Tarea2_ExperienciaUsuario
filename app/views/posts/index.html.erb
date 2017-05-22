@@ -1,0 +1,8 @@
+<h1>Published Posts</h1>
+<% @posts.each do |p| %>
+    <h3><%=	link_to p.title, p  %></h3>
+    <center>
+    <img src="<%=p.avatar_url%>" height="200" width="200" align="center">
+    </center>
+    <p><%=	p.message  %></p>
+<% end %>

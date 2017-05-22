@@ -1,0 +1,7 @@
+<h1>EDIT POST</h1>
+
+<%= render 'formedit', post: @post %>
+<p>
+  <%= link_to 'CANCELAR', @post %> - <%=	link_to 'DELETE',@post, method: :delete, data: {
+    confirm: "Seguro?"} %>
+</p>
